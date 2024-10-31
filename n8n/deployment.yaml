@@ -17,16 +17,6 @@ spec:
           image: n8nio/n8n:latest
           ports:
             - containerPort: 5678
-          env:
-            - name: N8N_BASIC_AUTH_ACTIVE
-              value: "true"
-            - name: N8N_BASIC_AUTH_USER
-              value: "aidevs"
-            - name: N8N_BASIC_AUTH_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  key: password
-                  name: n8n-secret
           volumeMounts:
             - mountPath: "/home/node/.n8n"
               name: n8n-storage
