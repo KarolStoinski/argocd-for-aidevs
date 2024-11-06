@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: langfuse
+  labels:
+    app: langfuse
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: langfuse
+  template:
+    metadata:
+      labels:
+        app: langfuse
+    spec:
+      containers:
+        - name: langfuse
+          image: langfuse/langfuse:latest
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - secretRef:
+                name: langfuse-env
+          volumeMounts:
+            - mountPath: /data
+              name: langfuse-storage
+      volumes:
+        - name: langfuse-storage
+          hostPath:
+            path: /home/karol/aidevs-data/langfuse
+            type: DirectoryOrCreate
+
