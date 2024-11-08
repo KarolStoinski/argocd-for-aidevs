@@ -8,4 +8,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /home/karol/aidevs-data/jenkins
+    path: /opt/aidevs-data/jenkins

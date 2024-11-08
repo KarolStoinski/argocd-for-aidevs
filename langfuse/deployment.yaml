@@ -28,6 +28,6 @@ spec:
       volumes:
         - name: langfuse-storage
           hostPath:
-            path: /home/karol/aidevs-data/langfuse
+            path: /opt/aidevs-data/langfuse
             type: DirectoryOrCreate
 

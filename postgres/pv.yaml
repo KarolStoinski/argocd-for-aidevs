@@ -8,4 +8,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/home/karol/aidevs-data/postgresql"
+    path: "/opt/aidevs-data/postgresql"

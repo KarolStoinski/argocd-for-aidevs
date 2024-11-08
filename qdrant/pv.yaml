@@ -8,4 +8,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/home/karol/aidevs-data/qdrant"
+    path: "/opt/aidevs-data/qdrant"

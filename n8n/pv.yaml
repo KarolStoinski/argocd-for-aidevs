@@ -8,4 +8,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/home/karol/aidevs-data/n8n"
+    path: "/opt/aidevs-data/n8n"
