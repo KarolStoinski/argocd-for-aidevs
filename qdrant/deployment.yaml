@@ -28,5 +28,6 @@ spec:
               name: qdrant-storage
       volumes:
         - name: qdrant-storage
-          persistentVolumeClaim:
-            claimName: qdrant-pvc
+          hostPath:
+            path: /opt/aidevs-data/qdrant
+            type: DirectoryOrCreate

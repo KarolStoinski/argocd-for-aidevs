@@ -32,5 +32,6 @@ spec:
               name: postgres-storage
       volumes:
         - name: postgres-storage
-          persistentVolumeClaim:
-            claimName: postgres-pvc
+          hostPath:
+            path: /opt/aidevs-data/postgresql
+            type: DirectoryOrCreate

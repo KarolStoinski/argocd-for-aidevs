@@ -22,5 +22,6 @@ spec:
               mountPath: /var/jenkins_home
       volumes:
         - name: jenkins-data
-          persistentVolumeClaim:
-            claimName: jenkins-pvc
+          hostPath:
+            path: /opt/aidevs-data/jenkins
+            type: DirectoryOrCreate

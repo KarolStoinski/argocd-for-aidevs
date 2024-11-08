@@ -22,5 +22,6 @@ spec:
               name: n8n-storage
       volumes:
         - name: n8n-storage
-          persistentVolumeClaim:
-            claimName: n8n-pvc
+          hostPath:
+            path: /opt/aidevs-data/n8n
+            type: DirectoryOrCreate
