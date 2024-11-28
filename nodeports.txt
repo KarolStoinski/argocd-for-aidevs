@@ -5,3 +5,4 @@
 30005 - jenkins
 30006 - langfuse
 30007 - neo4j
+30008 - neo4j-bolt
