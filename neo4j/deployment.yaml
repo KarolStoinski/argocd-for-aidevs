@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: neo4j
-          image: neo4j:5.25.1-community-bullseye
+          image: neo4j
           ports:
             - containerPort: 7474
           volumeMounts:
