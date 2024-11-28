@@ -4,3 +4,4 @@
 30004 - qdrant
 30005 - jenkins
 30006 - langfuse
+30007 - neo4j

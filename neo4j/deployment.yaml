@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neo4j
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: neo4j
+  template:
+    metadata:
+      labels:
+        app: neo4j
+    spec:
+      containers:
+        - name: neo4j
+          image: neo4j:5.25.1-community-bullseye
+          ports:
+            - containerPort: 7474
+          env:
+            - name: NEO4J_AUTH
+              value: none
+          volumeMounts:
+            - mountPath: "/data"
+              name: neo4j-storage
+      volumes:
+        - name: neo4j-storage
+          hostPath:
+            path: /opt/aidevs-data/neo4j
+            type: DirectoryOrCreate
