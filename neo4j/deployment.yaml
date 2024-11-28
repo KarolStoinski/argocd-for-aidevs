@@ -15,6 +15,9 @@ spec:
       containers:
         - name: neo4j
           image: neo4j:4.4
+          env:
+            - name: NEO4J_AUTH
+              value: none
           ports:
             - containerPort: 7474
           volumeMounts:
